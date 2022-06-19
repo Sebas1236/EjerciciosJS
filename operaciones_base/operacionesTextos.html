@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS only -->
+  <link rel="stylesheet" href="../css/styles.css">
+  <title>Operaciones con textos</title>
+</head>
+
+<body>
+  <button onclick="location.href='../operaciones_base.html'" type="button">🠸</button>
+  <div class="box" id="heading">
+    <h1>Operaciones con textos</h1>
+
+  </div>
+  <div align="center">
+    <label for="numero">Ingrese el texto: </label>
+    <input type="text" id="texto" />
+    <button onclick="calcularOperaciones()">✔</button>
+    <br />
+    <label id="resultado"></label>
+    <br />
+    <label id="longitud"></label>
+    <br />
+    <label id="upper"></label>
+    <br />
+    <label id="lower"></label>
+  </div>
+  <script type="text/javascript">
+    var arr=[];
+    function calcularOperaciones()
+    {
+      texto = document.getElementById("texto").value;
+      document.getElementById("longitud").innerHTML="Longitud: "+texto.length;
+      document.getElementById("upper").innerHTML="Mayúsculas: "+texto.toUpperCase();
+      document.getElementById("lower").innerHTML="Minúsculas: "+texto.toLowerCase();
+
+    }
+  </script>
+</body>
+
+</html>

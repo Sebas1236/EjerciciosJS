@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS only -->
+  <link rel="stylesheet" href="../css/styles.css">
+  <title>Selection sort</title>
+</head>
+
+<body>
+  <button onclick="location.href='../ordenamientos.html'" type="button">🠸</button>
+  <div class="box" id="heading">
+    <h1>Selection Sort</h1>
+
+  </div>
+  <div align="center">
+    <label for="numero">Ingrese un elemento al arreglo: </label>
+    <input type="number" id="numero" />
+    <button onclick="addNumber()">✔</button>
+    <br />
+    <label id="resultado"></label>
+  </div>
+  <script type="text/javascript">
+    var arr = [];
+
+    function addNumber() {
+      numero = document.getElementById("numero").value;
+      arr.push(numero);
+      document.getElementById("resultado").innerHTML = Seleccion(arr);
+    }
+
+    function swap(arr, xp, yp) {
+      var temp = arr[xp];
+      arr[xp] = arr[yp];
+      arr[yp] = temp;
+    }
+
+    function Seleccion(arr) {
+      n = arr.length;
+      var i, j, min_idx;
+      for (i = 0; i < n - 1; i++) {
+        min_idx = i;
+        for (j = i + 1; j < n; j++)
+          if (arr[j] < arr[min_idx])
+            min_idx = j;
+        swap(arr, min_idx, i);
+      }
+      return arr;
+    }
+  </script>
+</body>
+
+</html>

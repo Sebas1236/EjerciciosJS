@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS only -->
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <title>Operaciones Base</title>
+</head>
+
+<body>
+  <div class="box" id="heading">
+        <a href="index.html"><h1>Operaciones Base</h1></a>
+  </div>
+  <div class="box">
+    <div class="item">
+      <a onclick="parImpar()"><p>Pares - Impares</p></a>
+    </div>
+    <div class="item">
+      <a onclick="tablasDeMultiplicar()"><p>Tablas de Multiplicar</p></a>
+    </div>
+    <div class="item">
+      <a onclick="productoSumas()"><p>Producto con sumas</p></a>
+    </div>
+    <div class="item">
+      <a href="operaciones_base/numeroMayor.html"><p>Número Mayor en Arreglo</p></a>
+    </div>
+    <div class="item">
+      <a href="operaciones_base/sumarDosArreglos.html"><p>Suma de Arreglos</p></a>
+    </div>
+    <div class="item">
+      <a href="operaciones_base/media.html"><p>Media Aritmética</p></a>
+    </div>
+    <div class="item">
+      <a href="operaciones_base/operacionesTextos.html"><p>Operaciones con textos</p></a>
+    </div>
+  </div>
+  <script type="text/javascript">
+    function parImpar()
+    {
+      numero=prompt("Ingrese un numero");
+      if(numero%2===0)
+        alert("El número es par");
+      else
+        alert("El número es impar");
+    }
+    function tablasDeMultiplicar()
+    {
+      numero=prompt("Ingrese un numero");
+      arr=[];
+      for(i=0;i<=10;i++)
+      {
+        resultado=numero*i;
+        arr.push(resultado);
+      }
+      alert("La tabla de multiplicar de "+ numero+" es, del 0 al 10: "+arr);
+
+    }
+    function productoSumas()
+    {
+      n1=parseInt(prompt("Ingrese el primer número: "));
+      n2=prompt("Ingrese el segundo número: ");
+      resultado=0;
+      for(i=0;i<n2;i++)
+      {
+        resultado+=n1;
+      }
+      alert("El resultado de "+n1+"*"+n2+" es: "+resultado);
+    }
+  </script>
+
+
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  <!--Popper-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+</body>
+<!-- Footer -->
+<footer>
+  Copyrigth 2021 Sebastián
+</footer>
+
+<!-- Footer -->
+</html>
