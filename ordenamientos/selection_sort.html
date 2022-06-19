@@ -27,7 +27,7 @@
     var arr = [];
 
     function addNumber() {
-      numero = document.getElementById("numero").value;
+      numero = parseInt(document.getElementById("numero").value);
       arr.push(numero);
       document.getElementById("resultado").innerHTML = Seleccion(arr);
     }
